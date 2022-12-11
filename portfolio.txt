@@ -1,0 +1,12 @@
+title: portfolio
+name: 
+
+
+portfolio design:
+1. ngikutin design batu gunting kertas
+2. background color gradient kyk di contoh tapi ada animasi brigtnessnya
+3. halaman utama akan ada intro yg akan berganti setiap kita klik(kyk di batu gunting kertas) dengan transisi opacity, dan diusahakan intro tidak akan diulang setelah jika sudah direfresh dan sudah di halaman utama
+
+click to continue
+
+navbar miring dengan animasi jatoh abis intro

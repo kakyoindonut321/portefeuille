@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'undertale';
+    src: url('undertale.ttf') format('woff'), url('undertale.ttf') format('truetype');
+}
+
+.secondFog {
+    right: -100%;
+    animation: foglayer_right 16s linear infinite;
+}
+
+.theFog {
+    animation: foglayer_left 16s linear infinite;
+}
+
+.theFog,
+.secondFog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* filter: blur(3px) grayscale(0.2) saturate(1.2) sepia(0.2); */
+    background: url("asset/image/fogpix.png") center center/cover repeat transparent;
+    opacity: 0.5;
+}
+
+@keyframes foglayer_left {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes foglayer_right {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: linear-gradient(to right, rgb(150, 150, 150), rgb(0, 0, 0), rgb(150, 150, 150)) 50% 0/100% 100vh no-repeat;
+    font-family: 'undertale';
+    /* backdrop-filter: blur(10px); */
+    /* animation: alterego 1.5s 1 alternate; */
+}
+
+.gradbody {
+    animation: change .5s linear 2 alternate;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    display: none;
+    opacity: 0;
+}
+
+.glow {
+    text-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+    /* background-color: green; */
+    animation: glowin 1s linear infinite alternate-reverse;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    color: white;
+    user-select: none;
+}
+
+.show {
+    animation: fadeIn 1s forwards;
+    animation-delay: .5s;
+}
+
+.hide {
+    animation: fadeOut 1s forwards;
+}
+
+.part {
+    opacity: 0;
+}
+
+@keyframes glowin {
+    to {
+        text-shadow: 5px 5px 10px grey, -5px -5px 10px grey;
+        /* background-color: white; */
+    }
+}
+
+@keyframes change {
+    to {
+        background-size: 200% 100vh;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.partThree {
+    /* Center the text in the viewport. */
+    /* position: absolute;
+    margin: auto;
+    width: 100vw; */
+    /* height: 80pt; */
+    /* top: 0;
+    bottom: 0; */
+    /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    margin: 0;
+    padding: 0;
+    /* position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-family: 'undertale'; */
+    font-size: 10vw;
+    /* background: linear-gradient(to right, red, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent; */
+    text-align: center;
+}
+
+
+/* ANIME JS */
+
+
+/* .demo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo div {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid black;
+    background-color: green;
+}  */

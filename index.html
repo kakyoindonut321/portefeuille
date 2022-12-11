@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="fog.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="">
+    <!-- <div class="theFog"></div>
+    <div class="secondFog"></div> -->
+    <!-- <div class="theFog">
+        <div id="foglayer_01" class="fog">
+            <div class="image01"></div>
+            <div class="image02"></div>
+        </div>
+        <div id="foglayer_02" class="fog">
+            <div class="image01"></div>
+            <div class="image02"></div>
+        </div>
+        <div id="foglayer_03" class="fog">
+            <div class="image01"></div>
+            <div class="image02"></div>
+        </div>
+    </div> -->
+
+
+    <div class="intro">
+        <div class="partOne part">
+            <h1 class="first glow">Welcome</h1>
+        </div>
+        <div class="partTwo part">
+            <h1 class="second glow">Introducing...</h1>
+        </div>
+        <div class="partThree part">
+            <p id="text1"></p>
+            <p id="text2"></p>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>mamamia</h1>
+    </div>
+
+
+    <script src="anime.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- <script>
+        // AOS.init();
+        $("button").click(function() {
+            $('html,body').animate({
+                    scrollTop: $(".here").offset().top
+                },
+                'slow');
+        });
+    </script> -->
+
+
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                <feColorMatrix in="SourceGraphic"
+                        type="matrix"
+                        values="1 0 0 0 0
+                                        0 1 0 0 0
+                                        0 0 1 0 0
+                                        0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+</body>
+
+</html>
