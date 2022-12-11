@@ -3,6 +3,7 @@ const intro = document.querySelector('.intro');
 const parts = document.querySelectorAll(".part");
 const body = document.querySelector("body");
 const main = document.querySelector(".main");
+const fog = document.querySelector('.fog');
 var textSpeed = 100;
 var timer = true;
 let state = 0;
@@ -75,14 +76,18 @@ document.addEventListener("click", function() {
         return;
     }
     if ((state + 1) == parts.length) {
-        delayLama(() => { body.classList.add('gradbody'); }, 0, () => { body.classList.remove('gradbody'); });
+        delayLama(() => { body.classList.add('longerGradbody'); }, 0, () => { body.classList.remove('longerGradbody'); });
         intro.classList.add("hide");
-        main.classList.add("show");
-        setTimeout(() => {
+        fog.classList.add('hide');
+        delayLama(() => {
             intro.style.display = 'none';
             intro.style.opacity = '0';
-            main.style.display = 'block';
+            fog.style.display = 'none';
         }, 500);
+        delayLama(() => {
+            main.classList.add("show");
+            main.style.display = 'block';
+        }, 3000);
         document.removeEventListener('click', arguments.callee);
         return;
     }
@@ -113,7 +118,7 @@ document.addEventListener("click", function() {
 })
 
 
-// START MORBIUS --------------------------------------------------------------------------------
+// START MORBIUS --------------------------------------------------------------------------------------------------
 const elts = {
     text1: document.getElementById("text1"),
     text2: document.getElementById("text2")
@@ -206,7 +211,12 @@ function animate() {
     }
 }
 
-// expected output: 12
+// END MORBIUS ---------------------------------------------------------------------------------------
+
+
+
+
+
 
 // ANIME JS----------------------------------------------------
 

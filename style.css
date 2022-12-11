@@ -3,43 +3,6 @@
     src: url('undertale.ttf') format('woff'), url('undertale.ttf') format('truetype');
 }
 
-.secondFog {
-    right: -100%;
-    animation: foglayer_right 16s linear infinite;
-}
-
-.theFog {
-    animation: foglayer_left 16s linear infinite;
-}
-
-.theFog,
-.secondFog {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* filter: blur(3px) grayscale(0.2) saturate(1.2) sepia(0.2); */
-    background: url("asset/image/fogpix.png") center center/cover repeat transparent;
-    opacity: 0.5;
-}
-
-@keyframes foglayer_left {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -100%;
-    }
-}
-
-@keyframes foglayer_right {
-    0% {
-        right: -100%;
-    }
-    100% {
-        right: 0;
-    }
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -47,12 +10,14 @@ body {
     overflow-y: hidden;
     background: linear-gradient(to right, rgb(150, 150, 150), rgb(0, 0, 0), rgb(150, 150, 150)) 50% 0/100% 100vh no-repeat;
     font-family: 'undertale';
-    /* backdrop-filter: blur(10px); */
-    /* animation: alterego 1.5s 1 alternate; */
 }
 
 .gradbody {
     animation: change .5s linear 2 alternate;
+}
+
+.longerGradbody {
+    animation: longChange 2s linear 2 alternate;
 }
 
 .main {
@@ -73,6 +38,11 @@ body {
     justify-content: center;
     color: white;
     user-select: none;
+}
+
+.main {
+    margin: 0;
+    padding: 1px;
 }
 
 .show {
@@ -98,6 +68,21 @@ body {
 @keyframes change {
     to {
         background-size: 200% 100vh;
+    }
+}
+
+@keyframes longChange {
+    0% {
+        background-size: 100% 100vh;
+    }
+    20% {
+        background-size: 300% 100vh;
+    }
+    70% {
+        background-size: 300% 100vh;
+    }
+    100% {
+        background-size: 300% 100vh;
     }
 }
 
