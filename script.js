@@ -87,7 +87,7 @@ document.addEventListener("click", function() {
         delayLama(() => {
             main.classList.add("show");
             main.style.display = 'block';
-        }, 3000);
+        }, 2000);
         document.removeEventListener('click', arguments.callee);
         return;
     }
@@ -106,7 +106,9 @@ document.addEventListener("click", function() {
             continue
         }
         if (i == state) {
-            delayLama(() => { parts[i].style.display = 'block'; }, 500);
+            delayLama(() => {
+                parts[i].style.display = 'block';
+            }, 500);
             parts[i].classList.add("show")
             if (state == 2) {
                 funcState = true;

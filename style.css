@@ -12,19 +12,29 @@ body {
     font-family: 'undertale';
 }
 
-.gradbody {
-    animation: change .5s linear 2 alternate;
-}
-
-.longerGradbody {
-    animation: longChange 2s linear 2 alternate;
-}
-
 .main {
     display: flex;
     justify-content: center;
     display: none;
     opacity: 0;
+    margin: 0;
+    padding: 1px;
+}
+
+
+/* NAVBAR */
+
+.nav {}
+
+
+/* INTRO */
+
+.gradbody {
+    animation: change .5s linear 2 alternate;
+}
+
+.longerGradbody {
+    animation: longChange 1s linear 2 alternate;
 }
 
 .glow {
@@ -40,11 +50,6 @@ body {
     user-select: none;
 }
 
-.main {
-    margin: 0;
-    padding: 1px;
-}
-
 .show {
     animation: fadeIn 1s forwards;
     animation-delay: .5s;
@@ -57,6 +62,25 @@ body {
 .part {
     opacity: 0;
 }
+
+
+/* TITLE SUQUENCE */
+
+.partThree {
+    /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    margin: 0;
+    padding: 0;
+    font-size: 10vw;
+    text-align: center;
+}
+
+
+/* KEYFRAME */
 
 @keyframes glowin {
     to {
@@ -102,35 +126,6 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-.partThree {
-    /* Center the text in the viewport. */
-    /* position: absolute;
-    margin: auto;
-    width: 100vw; */
-    /* height: 80pt; */
-    /* top: 0;
-    bottom: 0; */
-    /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-    filter: url(#threshold) blur(0.6px);
-}
-
-#text1,
-#text2 {
-    margin: 0;
-    padding: 0;
-    /* position: absolute;
-    width: 100%;
-    display: inline-block;
-    font-family: 'undertale'; */
-    font-size: 10vw;
-    /* background: linear-gradient(to right, red, blue, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent; */
-    text-align: center;
 }
 
 
