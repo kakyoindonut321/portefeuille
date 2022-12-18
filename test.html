@@ -5,111 +5,203 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>main menu</title>
     <style>
         @font-face {
             font-family: 'undertale';
-            src: url('undertale.ttf') format('woff'), url('undertale.ttf') format('truetype');
+            src: url('/asset/font/undertale.ttf') format('woff'), url('/asset/font/undertale.ttf') format('truetype');
+        }
+        
+        html {
+            height: 100%;
         }
         
         body {
             padding: 0;
             margin: 0;
-            background-color: #202020;
+            /* background-color: #202020; */
+            background-color: black;
+            background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png');
+            background-size: 40%;
+            background-position: center;
             font-family: 'undertale';
         }
-        /* nav {
+        
+        .nav-item {
+            position: absolute;
+            text-align: center;
+            width: 30%;
+            height: 40px;
+            top: 0;
+            left: -40%;
+            transition: all 0.5s ease;
+        }
+        
+        .nav-item a {
             position: relative;
-            padding: 1px 5em 1px 1px;
-            overflow: hidden;
-            float: right;
-        }
-        
-        nav:after {
-            content: '';
-            position: absolute;
-            top: -40%;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            transform-origin: 100% 0;
-            transform: skew(80deg);
-            animation: appear 1s forwards;
-            z-index: -1;
-        }
-         */
-        
-        .nav1 {
-            /* position: relative; */
-            display: inline-block;
-            padding: 10px 5em 10px 10px;
-            /* overflow: hidden; */
-        }
-        
-        .nav1:after {
-            content: '';
-            position: absolute;
-            top: -20%;
-            left: 0;
-            width: 50%;
-            height: 60px;
-            background-color: white;
-            transform-origin: 100% 0;
-            transform: skew(60deg);
-            animation: appear 2s forwards;
-            z-index: -1;
-        }
-        
-        .nav2 {
-            position: absolute;
-            width: 70%;
-            height: 60px;
-            top: -20%;
-            right: 0;
-            background-color: white;
-            animation: appear 2s forwards;
-        }
-        
-        @keyframes appear {
-            to {
-                top: 0;
-            }
-        }
-        
-        .list {
-            /* border: 1px solid black; */
-            margin: 5px;
-            display: flex;
-            justify-content: space-evenly;
-        }
-        
-        .list .item {}
-        
-        .list .item a {
-            color: black;
-            font-size: 30px;
             text-decoration: none;
-            text-shadow: 0px 1px 0px red;
+            color: white;
+            font-size: 26px;
+            text-shadow: 0px 2px 0px black;
         }
         
-        .list .item a:hover {
+        .nav-item a:hover {
             color: orange;
+        }
+        
+        .one {
+            background-color: navy;
+            z-index: 3;
+        }
+        
+        .two {
+            background-color: blue;
+            z-index: 2;
+        }
+        
+        .three {
+            background-color: cornflowerblue;
+            z-index: 1;
+        }
+        
+        .one.open {
+            left: 0;
+        }
+        
+        .two.open {
+            left: 30%;
+        }
+        
+        .three.open {
+            left: 60%;
+        }
+        
+        .one:after {
+            color: navy;
+            border-left: 20px solid;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            display: inline-block;
+            content: '';
+            position: absolute;
+            right: -20px;
+        }
+        
+        .two:after {
+            color: blue;
+            border-left: 20px solid;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            display: inline-block;
+            content: '';
+            position: absolute;
+            right: -20px;
+        }
+        
+        .three:after {
+            color: cornflowerblue;
+            border-left: 20px solid;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            display: inline-block;
+            content: '';
+            position: absolute;
+            right: -20px;
+        }
+        
+        .hamburger {
+            position: absolute;
+            background-color: #620265;
+            text-align: center;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            z-index: 4;
+        }
+        
+        .hamburger a {
+            color: white;
+            font-size: 26px;
+            transition: color .1s ease;
+        }
+        
+        .hamburger a:hover {
+            color: orange;
+            cursor: pointer;
+        }
+        
+        .hamburger:after {
+            color: #620265;
+            border-left: 20px solid;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            display: inline-block;
+            content: '';
+            position: absolute;
+            right: -20px;
+            z-index: 4;
+        }
+        
+        @media screen and (max-width: 720px) {
+            .nav-item {
+                width: 80%;
+                left: -90%;
+            }
+            .nav-item a {
+                font-size: 22px;
+            }
+            .one.open {
+                left: 0;
+            }
+            .two.open {
+                left: 0;
+            }
+            .three.open {
+                left: 0;
+            }
+            .two {
+                transition-delay: .1s;
+                top: 40px;
+            }
+            .three {
+                transition-delay: .2s;
+                top: 80px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="nav1">
-
-    </div>
-    <div class="nav2">
-        <div class="list">
-            <div class="item"><a href="">About</a></div>
-            <div class="item"><a href="">Contact</a></div>
-            <div class="item"><a href="">Music</a></div>
+    <div>
+        <div class="hamburger">
+            <a><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="nav1">
+            <div class="one nav-item">
+                <a href="">Main</a>
+            </div>
+            <div class="two nav-item">
+                <a href="">Contact</a>
+            </div>
+            <div class="three nav-item">
+                <a href="">Music</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        let ham = document.querySelector('.hamburger a');
+        let navList = document.querySelector('.nav1').children;
+
+        ham.addEventListener("click", () => {
+            console.log('jdodj');
+            for (let iNav = 0; iNav < navList.length; iNav++) {
+                navList[iNav].classList.toggle('open');
+                console.log(navList[iNav]);
+            }
+        });
+    </script>
 </body>
 
 </html>

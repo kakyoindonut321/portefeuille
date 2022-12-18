@@ -3,6 +3,7 @@ const intro = document.querySelector('.intro');
 const parts = document.querySelectorAll(".part");
 const body = document.querySelector("body");
 const main = document.querySelector(".main");
+const cont = document.querySelector('.continue');
 const fog = document.querySelector('.fog');
 var textSpeed = 100;
 var timer = true;
@@ -46,6 +47,8 @@ function typeWriter(theText, targetText) {
         iType = 0;
         newText = '';
         funcState = false;
+        cont.style.display = 'block';
+        cont.classList.add('showcontinue');
     }
 
 
@@ -72,17 +75,16 @@ function beforeType(daClass) {
 //EVENT LISTENER FOR INTRO
 document.addEventListener("click", function() {
     if (funcState) {
-        console.log('estrogen');
         return;
     }
     if ((state + 1) == parts.length) {
         delayLama(() => { body.classList.add('longerGradbody'); }, 0, () => { body.classList.remove('longerGradbody'); });
         intro.classList.add("hide");
-        fog.classList.add('hide');
+        // fog.classList.add('hide');
         delayLama(() => {
             intro.style.display = 'none';
             intro.style.opacity = '0';
-            fog.style.display = 'none';
+            // fog.style.display = 'none';
         }, 500);
         delayLama(() => {
             main.classList.add("show");
@@ -120,7 +122,7 @@ document.addEventListener("click", function() {
 })
 
 
-// START MORBIUS --------------------------------------------------------------------------------------------------
+// START TITLE SEQUENCE --------------------------------------------------------------------------------------------------
 const elts = {
     text1: document.getElementById("text1"),
     text2: document.getElementById("text2")
