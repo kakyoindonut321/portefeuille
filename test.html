@@ -20,10 +20,11 @@
         body {
             padding: 0;
             margin: 0;
-            /* background-color: #202020; */
             background-color: black;
-            background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png');
+            /* background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png'); */
+            background-image: url('asset/image/starsbg.png');
             background-size: 40%;
+            background-repeat: repeat;
             background-position: center;
             font-family: 'undertale';
         }
@@ -169,25 +170,80 @@
                 top: 80px;
             }
         }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            margin: 100px;
+        }
+        
+        .circle {
+            width: 300px;
+            height: 300px;
+            /* background-color: white; */
+            background: linear-gradient(to bottom, rgba(66, 135, 255, 0) 50%, rgb(33, 65, 224) 50%);
+            border-radius: 50%;
+            margin-left: 0;
+            transition: all 1s ease-in-out;
+        }
+        
+        .circle:hover {
+            transform: rotate(180deg);
+            /* animation: rotate 1s linear forwards 1; */
+        }
+        
+        .circle hr {
+            /* width: 50%; */
+            margin-top: 50%;
+            margin-bottom: 50%;
+            padding: 1px;
+            background-color: darkblue;
+            border: none;
+        }
+        
+        .description {
+            width: 300px;
+            min-height: 400px;
+            background-color: rgb(33, 65, 224);
+        }
+        /* @keyframes rotate {
+            to {
+                transform: rotate(180deg);
+            }
+        } */
     </style>
 </head>
 
 <body>
-    <div>
+    <div class="navbar">
         <div class="hamburger">
             <a><i class="fa-solid fa-bars"></i></a>
         </div>
         <div class="nav1">
             <div class="one nav-item">
-                <a href="">Main</a>
+                <a href="">Profile</a>
             </div>
             <div class="two nav-item">
                 <a href="">Contact</a>
             </div>
             <div class="three nav-item">
-                <a href="">Music</a>
+                <a href="">Works</a>
             </div>
         </div>
+    </div>
+
+    <div class="content">
+        <div>
+            <div class="circle">
+
+                <!-- <hr> -->
+            </div>
+            <div class="description">
+                <h1>helo</h1>
+                <p>sdaaih sda asdioh asod hosd oashd oasdo asgf oasfh oasdhpas hdpasidh paisdhp asipdhasipdhpasd </p>
+            </div>
+        </div>
+
     </div>
 
     <script>
