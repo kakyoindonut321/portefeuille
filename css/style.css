@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'undertale';
-    src: url('undertale.ttf') format('woff'), url('undertale.ttf') format('truetype');
+    src: url('/asset/font/undertale.ttf') format('woff'), url('/asset/font/undertale.ttf') format('truetype');
 }
 
 body {
@@ -8,7 +8,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    background: linear-gradient(to right, rgb(150, 150, 150), rgb(0, 0, 0), rgb(150, 150, 150)) 50% 0/100% 100vh no-repeat;
+    background: linear-gradient(to right, rgb(100, 160, 200), rgb(0, 0, 0), rgb(100, 160, 200)) 50% 0/100% 100vh no-repeat;
     font-family: 'undertale';
 }
 
@@ -50,9 +50,20 @@ body {
     user-select: none;
 }
 
+.continue {
+    opacity: 0;
+    position: absolute;
+    top: 70%;
+}
+
 .show {
     animation: fadeIn 1s forwards;
     animation-delay: .5s;
+}
+
+.showcontinue {
+    animation: fadeIn 3s forwards;
+    animation-delay: 2s;
 }
 
 .hide {

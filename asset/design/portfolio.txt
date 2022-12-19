@@ -9,4 +9,18 @@ portfolio design:
 
 click to continue
 
-navbar miring dengan animasi jatoh abis intro
+navbar miring dengan animasi jatoh abis intro(failed)
+
+dari tiga halaman(about, contact, music)
+akan ada background yg berbeda-beda, halaman about bertema malam, contact sore dan music siang+awan
+
+di paling bawah akan ada background kota, kyk di flappy bird
+
+
+
+
+
+
+
+
+
