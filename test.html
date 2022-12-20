@@ -21,11 +21,12 @@
             padding: 0;
             margin: 0;
             background-color: black;
-            /* background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png'); */
-            background-image: url('asset/image/starsbg.png');
-            background-size: 40%;
-            background-repeat: repeat;
-            background-position: center;
+            background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png');
+            /* background-image: url('asset/image/starsbg.png'); */
+            background-size: 100%, 40%;
+            background-repeat: no-repeat, repeat;
+            background-attachment: fixed, scroll;
+            background-position: center, center;
             font-family: 'undertale';
         }
         
@@ -144,6 +145,105 @@
             z-index: 4;
         }
         
+        .content {
+            margin: 40px;
+            margin-top: 100px;
+        }
+        
+        .pfp {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .pfp img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid rgb(66, 135, 255);
+            border-radius: 50%;
+        }
+        
+        .datadiri {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        /* .flex-item {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+         */
+        
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            transition: all 1s ease-in-out;
+            /* animation: kraby 10s linear infinite alternate; */
+        }
+        /* @keyframes kraby {
+            0% {
+                transform: rotate(0deg);
+            }
+            45% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        } */
+        
+        .circle:hover {
+            transform: rotate(180deg);
+        }
+        
+        .c-icon {
+            position: absolute;
+            font-size: 50px;
+            top: 110px;
+            right: 125px;
+        }
+        
+        .textUp {
+            width: 100%;
+            height: 50%;
+            border: 1px solid transparent;
+        }
+        
+        .textDown {
+            position: relative;
+            transform: scale(-1, -1);
+            width: 100%;
+            height: 50%;
+            border: 1px solid transparent;
+        }
+        
+        .subDown {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .mercury {
+            background: linear-gradient(to bottom, #68696D 50%, #ADA8A5 50%);
+        }
+        
+        .venus {
+            background: linear-gradient(to bottom, #CC3A00 50%, #FF9E43 50%);
+        }
+        
+        .earth {
+            background: linear-gradient(to bottom, #6B93D6 50%, #9FC164 50%);
+        }
+        
         @media screen and (max-width: 720px) {
             .nav-item {
                 width: 80%;
@@ -171,41 +271,24 @@
             }
         }
         
-        .content {
-            display: flex;
-            justify-content: center;
-            margin: 100px;
+        @media screen and (max-width: 400px) {
+            .circle {
+                width: 270px;
+                height: 270px;
+            }
+            .c-icon {
+                font-size: 45px;
+                top: 100px;
+                right: 110px;
+            }
         }
-        
-        .circle {
-            width: 300px;
-            height: 300px;
-            /* background-color: white; */
-            background: linear-gradient(to bottom, rgba(66, 135, 255, 0) 50%, rgb(33, 65, 224) 50%);
-            border-radius: 50%;
-            margin-left: 0;
-            transition: all 1s ease-in-out;
-        }
-        
-        .circle:hover {
-            transform: rotate(180deg);
-            /* animation: rotate 1s linear forwards 1; */
-        }
-        
-        .circle hr {
-            /* width: 50%; */
+        /* .circle hr {
             margin-top: 50%;
             margin-bottom: 50%;
             padding: 1px;
             background-color: darkblue;
             border: none;
-        }
-        
-        .description {
-            width: 300px;
-            min-height: 400px;
-            background-color: rgb(33, 65, 224);
-        }
+        } */
         /* @keyframes rotate {
             to {
                 transform: rotate(180deg);
@@ -233,29 +316,81 @@
     </div>
 
     <div class="content">
-        <div>
-            <div class="circle">
-
+        <div class="pfp">
+            <img src="asset/image/pfp.jpg" alt="">
+        </div>
+        <div class="datadiri">
+            <div class="circle mercury">
+                <div class="textUp">
+                    <h3>Name</h3>
+                    <h1>Piss</h1>
+                </div>
                 <!-- <hr> -->
+                <div class="c-icon">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <div class="textDown">
+                    <div class="subDown">
+                        <h2>Age</h2>
+                        <h1>16</h1>
+                    </div>
+                </div>
             </div>
-            <div class="description">
-                <h1>helo</h1>
-                <p>sdaaih sda asdioh asod hosd oashd oasdo asgf oasfh oasdhpas hdpasidh paisdhp asipdhasipdhpasd </p>
+            <div class="circle venus">
+                <div class="textUp">
+                    <h3>Major</h3>
+                    <h2 style="font-size: 22px;">Software Engineer</h2>
+                </div>
+                <!-- <hr> -->
+                <div class="c-icon">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <div class="textDown">
+                    <div class="subDown">
+                        <h3>Occupation</h3>
+                        <h1>student</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="circle earth">
+                <div class="textUp">
+                    <h3>Living in</h3>
+                    <h1>Indonesia</h1>
+                </div>
+                <!-- <hr> -->
+                <div class="c-icon">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <div class="textDown">
+                    <div class="subDown">
+                        <h3>Address</h3>
+                        <h1>Bekasi</h1>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-
     <script>
         let ham = document.querySelector('.hamburger a');
         let navList = document.querySelector('.nav1').children;
+        let circle = document.querySelector('.circle');
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
-        ham.addEventListener("click", () => {
-            console.log('jdodj');
+
+        if (width > 720) {
             for (let iNav = 0; iNav < navList.length; iNav++) {
                 navList[iNav].classList.toggle('open');
-                console.log(navList[iNav]);
             }
+        }
+
+        ham.addEventListener("click", () => {
+            for (let iNav = 0; iNav < navList.length; iNav++) {
+                navList[iNav].classList.toggle('open');
+            }
+        });
+
+        circle.addEventListener('mouseover', (event) => {
+            console.log('eheheh');
         });
     </script>
 </body>
