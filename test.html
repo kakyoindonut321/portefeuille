@@ -394,6 +394,13 @@
             console.log('eheheh');
         });
     </script>
+    <system.webServer>
+        <staticContent>
+            <remove fileExtension=".woff" />
+            <!-- In case IIS already has this mime type -->
+            <mimeMap fileExtension=".woff" mimeType="font/woff" />
+        </staticContent>
+    </system.webServer>
 </body>
 
 </html>
