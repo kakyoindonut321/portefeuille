@@ -11,7 +11,8 @@
         @font-face {
             font-family: 'undertale';
             /* src: url('/asset/font/undertale.ttf') format('woff'), url('/asset/font/undertale.ttf') format('truetype'); */
-            src: url('/asset/font/undertale.woff');
+            src: url('https://raw.githubusercontent.com/kakyoindonut321/portefeuille/main/asset/font/undertale.woff');
+            /* src: url('https'); */
         }
         
         html {
@@ -394,13 +395,6 @@
             console.log('eheheh');
         });
     </script>
-    <system.webServer>
-        <staticContent>
-            <remove fileExtension=".woff" />
-            <!-- In case IIS already has this mime type -->
-            <mimeMap fileExtension=".woff" mimeType="font/woff" />
-        </staticContent>
-    </system.webServer>
 </body>
 
 </html>
