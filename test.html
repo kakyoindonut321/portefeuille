@@ -21,11 +21,12 @@
             padding: 0;
             margin: 0;
             background-color: black;
-            /* background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png'); */
-            background-image: url('asset/image/starsbg.png');
-            background-size: 40%;
-            background-repeat: repeat;
-            background-position: center;
+            background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png');
+            /* background-image: url('asset/image/starsbg.png'); */
+            background-size: 100%, 40%;
+            background-repeat: no-repeat, repeat;
+            background-attachment: fixed, scroll;
+            background-position: center, center;
             font-family: 'undertale';
         }
         
@@ -172,40 +173,74 @@
         }
         
         .content {
+            margin: 40px;
+            margin-top: 100px;
+        }
+        
+        .pfp {
             display: flex;
             justify-content: center;
-            margin: 100px;
+        }
+        
+        .pfp img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid rgb(66, 135, 255);
+            border-radius: 50%;
+        }
+        
+        .datadiri {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .flex-item {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
         }
         
         .circle {
+            position: absolute;
             width: 300px;
             height: 300px;
-            /* background-color: white; */
-            background: linear-gradient(to bottom, rgba(66, 135, 255, 0) 50%, rgb(33, 65, 224) 50%);
+            color: #ffffff;
             border-radius: 50%;
-            margin-left: 0;
-            transition: all 1s ease-in-out;
+            transition: all 1s;
         }
         
-        .circle:hover {
-            transform: rotate(180deg);
-            /* animation: rotate 1s linear forwards 1; */
+        .circle:has(+.text-data:hover) {
+            transform: rotate(20deg) scale(110%);
         }
         
-        .circle hr {
-            /* width: 50%; */
+        .text-data {
+            position: absolute;
+            text-align: center;
+            color: white;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .mercury {
+            background: linear-gradient(to bottom, #68696D 50%, #ADA8A5 50%);
+        }
+        
+        .venus {
+            background: linear-gradient(to bottom, #CC3A00 50%, #FF9E43 50%);
+        }
+        
+        .earth {
+            background: linear-gradient(to bottom, #6B93D6 50%, #9FC164 50%);
+        }
+        /* .circle hr {
             margin-top: 50%;
             margin-bottom: 50%;
             padding: 1px;
             background-color: darkblue;
             border: none;
-        }
-        
-        .description {
-            width: 300px;
-            min-height: 400px;
-            background-color: rgb(33, 65, 224);
-        }
+        } */
         /* @keyframes rotate {
             to {
                 transform: rotate(180deg);
@@ -233,28 +268,54 @@
     </div>
 
     <div class="content">
-        <div>
-            <div class="circle">
-
-                <!-- <hr> -->
+        <div class="pfp">
+            <img src="asset/image/pfp.jpg" alt="">
+        </div>
+        <div class="datadiri">
+            <div class="flex-item">
+                <div class="circle mercury">
+                    <!-- <hr> -->
+                </div>
+                <div class="text-data">
+                    <h2>Name</h2>
+                    <h1>Jerma</h1>
+                </div>
             </div>
-            <div class="description">
-                <h1>helo</h1>
-                <p>sdaaih sda asdioh asod hosd oashd oasdo asgf oasfh oasdhpas hdpasidh paisdhp asipdhasipdhpasd </p>
+            <div class="flex-item">
+                <div class="circle venus">
+                    <!-- <hr> -->
+                </div>
+                <div class="text-data">
+                    <h2>Occupation</h2>
+                    <h1>Software Engineer</h1>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="circle earth">
+                    <!-- <hr> -->
+                </div>
+                <div class="text-data">
+                    <h2>Living in</h2>
+                    <h1>Hell</h1>
+                </div>
             </div>
         </div>
-
     </div>
-
     <script>
         let ham = document.querySelector('.hamburger a');
         let navList = document.querySelector('.nav1').children;
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
-        ham.addEventListener("click", () => {
-            console.log('jdodj');
+
+        if (width > 720) {
             for (let iNav = 0; iNav < navList.length; iNav++) {
                 navList[iNav].classList.toggle('open');
-                console.log(navList[iNav]);
+            }
+        }
+
+        ham.addEventListener("click", () => {
+            for (let iNav = 0; iNav < navList.length; iNav++) {
+                navList[iNav].classList.toggle('open');
             }
         });
     </script>

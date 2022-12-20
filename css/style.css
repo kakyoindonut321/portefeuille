@@ -8,7 +8,8 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    background: linear-gradient(to right, rgb(100, 160, 200), rgb(0, 0, 0), rgb(100, 160, 200)) 50% 0/100% 100vh no-repeat;
+    background: linear-gradient(to right, rgb(100, 160, 200), black, rgb(100, 160, 200)) 50% 0/100% 100vh no-repeat;
+    /* background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png'); */
     font-family: 'undertale';
 }
 
