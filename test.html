@@ -145,6 +145,105 @@
             z-index: 4;
         }
         
+        .content {
+            margin: 40px;
+            margin-top: 100px;
+        }
+        
+        .pfp {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .pfp img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid rgb(66, 135, 255);
+            border-radius: 50%;
+        }
+        
+        .datadiri {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        /* .flex-item {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+         */
+        
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            transition: all 1s ease-in-out;
+            /* animation: kraby 10s linear infinite alternate; */
+        }
+        /* @keyframes kraby {
+            0% {
+                transform: rotate(0deg);
+            }
+            45% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        } */
+        
+        .circle:hover {
+            transform: rotate(180deg);
+        }
+        
+        .c-icon {
+            position: absolute;
+            font-size: 50px;
+            top: 110px;
+            right: 125px;
+        }
+        
+        .textUp {
+            width: 100%;
+            height: 50%;
+            border: 1px solid transparent;
+        }
+        
+        .textDown {
+            position: relative;
+            transform: scale(-1, -1);
+            width: 100%;
+            height: 50%;
+            border: 1px solid transparent;
+        }
+        
+        .subDown {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .mercury {
+            background: linear-gradient(to bottom, #68696D 50%, #ADA8A5 50%);
+        }
+        
+        .venus {
+            background: linear-gradient(to bottom, #CC3A00 50%, #FF9E43 50%);
+        }
+        
+        .earth {
+            background: linear-gradient(to bottom, #6B93D6 50%, #9FC164 50%);
+        }
+        
         @media screen and (max-width: 720px) {
             .nav-item {
                 width: 80%;
@@ -172,67 +271,16 @@
             }
         }
         
-        .content {
-            margin: 40px;
-            margin-top: 100px;
-        }
-        
-        .pfp {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .pfp img {
-            width: 200px;
-            height: 200px;
-            border: 5px solid rgb(66, 135, 255);
-            border-radius: 50%;
-        }
-        
-        .datadiri {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .flex-item {
-            width: 300px;
-            height: 300px;
-            margin: 10px;
-        }
-        
-        .circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            color: #ffffff;
-            border-radius: 50%;
-            transition: all 1s;
-        }
-        
-        .circle:has(+.text-data:hover) {
-            transform: rotate(20deg) scale(110%);
-        }
-        
-        .text-data {
-            position: absolute;
-            text-align: center;
-            color: white;
-            width: 300px;
-            height: 300px;
-        }
-        
-        .mercury {
-            background: linear-gradient(to bottom, #68696D 50%, #ADA8A5 50%);
-        }
-        
-        .venus {
-            background: linear-gradient(to bottom, #CC3A00 50%, #FF9E43 50%);
-        }
-        
-        .earth {
-            background: linear-gradient(to bottom, #6B93D6 50%, #9FC164 50%);
+        @media screen and (max-width: 400px) {
+            .circle {
+                width: 270px;
+                height: 270px;
+            }
+            .c-icon {
+                font-size: 45px;
+                top: 100px;
+                right: 110px;
+            }
         }
         /* .circle hr {
             margin-top: 50%;
@@ -272,31 +320,52 @@
             <img src="asset/image/pfp.jpg" alt="">
         </div>
         <div class="datadiri">
-            <div class="flex-item">
-                <div class="circle mercury">
-                    <!-- <hr> -->
+            <div class="circle mercury">
+                <div class="textUp">
+                    <h3>Name</h3>
+                    <h1>Piss</h1>
                 </div>
-                <div class="text-data">
-                    <h2>Name</h2>
-                    <h1>Jerma</h1>
+                <!-- <hr> -->
+                <div class="c-icon">
+                    <i class="fa-solid fa-rotate"></i>
                 </div>
-            </div>
-            <div class="flex-item">
-                <div class="circle venus">
-                    <!-- <hr> -->
-                </div>
-                <div class="text-data">
-                    <h2>Occupation</h2>
-                    <h1>Software Engineer</h1>
+                <div class="textDown">
+                    <div class="subDown">
+                        <h2>Age</h2>
+                        <h1>16</h1>
+                    </div>
                 </div>
             </div>
-            <div class="flex-item">
-                <div class="circle earth">
-                    <!-- <hr> -->
+            <div class="circle venus">
+                <div class="textUp">
+                    <h3>Major</h3>
+                    <h2 style="font-size: 22px;">Software Engineer</h2>
                 </div>
-                <div class="text-data">
-                    <h2>Living in</h2>
-                    <h1>Hell</h1>
+                <!-- <hr> -->
+                <div class="c-icon">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <div class="textDown">
+                    <div class="subDown">
+                        <h3>Occupation</h3>
+                        <h1>student</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="circle earth">
+                <div class="textUp">
+                    <h3>Living in</h3>
+                    <h1>Indonesia</h1>
+                </div>
+                <!-- <hr> -->
+                <div class="c-icon">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <div class="textDown">
+                    <div class="subDown">
+                        <h3>Address</h3>
+                        <h1>Bekasi</h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -304,6 +373,7 @@
     <script>
         let ham = document.querySelector('.hamburger a');
         let navList = document.querySelector('.nav1').children;
+        let circle = document.querySelector('.circle');
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 
@@ -317,6 +387,10 @@
             for (let iNav = 0; iNav < navList.length; iNav++) {
                 navList[iNav].classList.toggle('open');
             }
+        });
+
+        circle.addEventListener('mouseover', (event) => {
+            console.log('eheheh');
         });
     </script>
 </body>
