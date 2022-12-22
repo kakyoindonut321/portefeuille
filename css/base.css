@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'undertale';
+    src: url('/asset/font/undertale.ttf') format('woff'), url('/asset/font/undertale.ttf') format('truetype');
+    /* src: url('https://raw.githubusercontent.com/kakyoindonut3/21/portefeuille/main/asset/font/undertale.woff'); */
+    /* src: url('https'); */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'undertale';
+}
+
+.nav-item {
+    position: absolute;
+    text-align: center;
+    width: 30%;
+    height: 40px;
+    top: 0;
+    left: -40%;
+    transition: all 0.5s ease;
+}
+
+.nav-item a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    text-shadow: 0px 2px 0px black;
+}
+
+.nav-item a:hover {
+    color: orange;
+}
+
+.one {
+    background-color: navy;
+    z-index: 3;
+}
+
+.two {
+    background-color: blue;
+    z-index: 2;
+}
+
+.three {
+    background-color: cornflowerblue;
+    z-index: 1;
+}
+
+.one.open {
+    left: 0;
+}
+
+.two.open {
+    left: 30%;
+}
+
+.three.open {
+    left: 60%;
+}
+
+.one:after {
+    color: navy;
+    border-left: 20px solid;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -20px;
+}
+
+.two:after {
+    color: blue;
+    border-left: 20px solid;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -20px;
+}
+
+.three:after {
+    color: cornflowerblue;
+    border-left: 20px solid;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -20px;
+}
+
+.hamburger {
+    position: absolute;
+    background-color: #620265;
+    text-align: center;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 4;
+}
+
+.hamburger a {
+    color: white;
+    font-size: 26px;
+    transition: color .1s ease;
+}
+
+.hamburger a:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.hamburger:after {
+    color: #620265;
+    border-left: 20px solid;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -20px;
+    z-index: 4;
+}
+
+.content {
+    margin: 40px;
+    margin-top: 100px;
+}
+
+footer {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: lightgray;
+    text-shadow: 0px 2px 0px black;
+    border-top: 4px solid green;
+    background-color: rgb(46, 46, 46);
+}
+
+.road {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 5px dashed orange;
+}
+
+.footerctn {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.github {
+    border: 3px dashed orange;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: dashed;
+    color: lightgray;
+    text-shadow: 0px 2px 0px black;
+}
+
+.github:hover {
+    color: yellow;
+}
+
+.license {
+    flex-grow: 1;
+}
+
+.social a img {
+    width: 40px;
+    height: 40px;
+}
+
+.secret a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+    text-shadow: none;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        background-size: 100%, 70%;
+    }
+    .nav-item {
+        width: 80%;
+        left: -90%;
+    }
+    .nav-item a {
+        font-size: 22px;
+    }
+    .one.open {
+        left: 0;
+    }
+    .two.open {
+        left: 0;
+    }
+    .three.open {
+        left: 0;
+    }
+    .two {
+        transition-delay: .1s;
+        top: 40px;
+    }
+    .three {
+        transition-delay: .2s;
+        top: 80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .github {
+        border: 2px dashed orange;
+        padding: 3px;
+        font-size: 14px;
+    }
+    .secret {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .github {
+        border: 2px dashed orange;
+        padding: 3px;
+        font-size: 10px;
+    }
+}
