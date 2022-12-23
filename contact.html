@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/night.css">
+    <link rel="stylesheet" href="css/sunset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>main menu</title>
 </head>
@@ -30,66 +30,46 @@
     </div>
 
     <div class="content">
-        <div class="pfp">
-            <img src="asset/image/pfp.jpg" alt="">
+        <h1 class="basetitle">EMAIL ME</h1>
+        <hr>
+        <div class="formemail">
+            <form action="mailto:forbiddenikki@gmail.com" method="post" enctype="text/plain">
+                <div class="subinput">
+                    <label for="name"><h4>Name</h4></label>
+                    <input type="text" name="name" class="name">
+                </div>
+                <div class="subinput">
+                    <label for="mail"><h4>Category</h4></label>
+                    <select name="type" type="select">
+                        <option value="Any">Any</option>
+                        <option value="Business">Business</option>
+                        <option value="Question">Question</option>
+                        <option value="Suggestion">Suggestion</option>
+                    </select>
+                </div>
+                <div class="subinput">
+                    <label for="message"><h4>Message</h4></label>
+                    <textarea type="text" name="message" class="message" placeholder="Please be respectful and polite"></textarea>
+                </div>
+                <div class="submit">
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
         </div>
-        <div class="datadiri">
-            <div class="circle mercury">
-                <div class="textUp">
-                    <h3>Name</h3>
-                    <h1>IkkI</h1>
-                </div>
-                <!-- <hr> -->
-                <div class="c-icon">
-                    <i class="fa-solid fa-rotate"></i>
-                </div>
-                <div class="textDown">
-                    <div class="subDown">
-                        <h2>Age</h2>
-                        <h1>16</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="circle venus">
-                <div class="textUp">
-                    <h3>Major</h3>
-                    <h2 class="exc">Software Engineer</h2>
-                </div>
-                <!-- <hr> -->
-                <div class="c-icon">
-                    <i class="fa-solid fa-rotate"></i>
-                </div>
-                <div class="textDown">
-                    <div class="subDown">
-                        <h3>Occupation</h3>
-                        <h1>student</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="circle earth">
-                <div class="textUp">
-                    <h3>Living in</h3>
-                    <h1>Indonesia</h1>
-                </div>
-                <!-- <hr> -->
-                <div class="c-icon">
-                    <i class="fa-solid fa-rotate"></i>
-                </div>
-                <div class="textDown">
-                    <div class="subDown">
-                        <h3>Address</h3>
-                        <h1>Bekasi</h1>
-                    </div>
-                </div>
+        <hr>
+        <div>
+            <h1 class="basetitle">Youtube</h1>
+            <div>
+
             </div>
         </div>
-        <div class="about">
-            <h1>About Me</h1>
-            <p>Hi, I am a 16 years old student, I am a young developer with so little experience on programming, designing, and music.</p>
-            <p>But I have worked at a lot of project that hopefully increase my experience, you could check my github below <span class="arrow1">⬇</span>
-                <p><a href="https://github.com/kakyoindonut321/" class="github">Github.com/kakyoindonut321</a></p>
+        <hr>
+        <div>
+            <h1 class="basetitle">Other Social</h1>
+            <div></div>
         </div>
     </div>
+
     <footer class="footer">
         <div class="road">
             <div class="footerctn">
@@ -125,10 +105,6 @@
                 navList[iNav].classList.toggle('open');
             }
         });
-
-        // circle.addEventListener('mouseover', (event) => {
-        //     console.log('eheheh');
-        // });
     </script>
 </body>
 

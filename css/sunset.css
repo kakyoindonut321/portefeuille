@@ -1,0 +1,106 @@
+body {
+    background-image: linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #3880B0);
+    background-size: 100%, 40%;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed, scroll;
+    background-position: center, center;
+}
+
+.basetitle {
+    color: darkslateblue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.formemail {
+    display: block;
+}
+
+.subinput {
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.subinput label h4 {
+    color: darkslateblue;
+    margin: 0;
+    padding: 5px;
+}
+
+.subinput input,
+.subinput select {
+    background-color: azure;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.subinput select {
+    font-size: 20px;
+}
+
+.message,
+.subinput select {
+    font-family: 'undertale-regular';
+}
+
+.submit {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.submit button {
+    border: none;
+    background-color: azure;
+    color: #101010;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 50px 5px 50px;
+    font-family: 'undertale';
+}
+
+.submit button:hover {
+    background-color: #d8e6e6;
+    color: orangered;
+    cursor: pointer;
+}
+
+.submit button:active {
+    background-color: azure;
+    color: #101010;
+    cursor: pointer;
+}
+
+.message {
+    background-color: azure;
+    width: 100%;
+    height: 150px;
+    /* padding: 12px 20px; */
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+footer {
+    border-top: 4px solid #00c500;
+    background-color: #565555;
+}
+
+.road {
+    border-top: 5px dashed #efef00;
+}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 500px) {}
+
+@media screen and (max-width: 380px) {}
