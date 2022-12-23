@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    background-image: linear-gradient(to bottom, transparent, navy), url('asset/image/starsbg.png');
+    background-image: linear-gradient(to bottom, transparent, navy), url('/asset/image/starsbg.png');
     /* background-image: url('asset/image/starsbg.png'); */
     background-size: 100%, 40%;
     background-repeat: no-repeat, repeat;
@@ -118,9 +118,14 @@ body {
     margin: 10px;
     /* background-color: midnightblue; */
     background-image: linear-gradient(45deg, midnightblue, navy, transparent);
+    font-size: 20px;
     padding: 10px;
     color: white;
     border: 2px solid white;
+}
+
+.about p {
+    font-family: 'undertale-regular';
 }
 
 .about h1 {
@@ -135,35 +140,30 @@ body {
     font-size: 10px;
 }
 
-@media screen and (max-width: 720px) {
-    body {
-        background-size: 100%, 70%;
-    }
-    .nav-item {
-        width: 80%;
-        left: -90%;
-    }
-    .nav-item a {
-        font-size: 22px;
-    }
-    .one.open {
-        left: 0;
-    }
-    .two.open {
-        left: 0;
-    }
-    .three.open {
-        left: 0;
-    }
-    .two {
-        transition-delay: .1s;
-        top: 40px;
-    }
-    .three {
-        transition-delay: .2s;
-        top: 80px;
-    }
+.github {
+    border: 3px dashed orange;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: dashed;
+    font-family: 'undertale';
+    color: lightgray;
+    text-shadow: 0px 2px 0px black;
 }
+
+.github:hover {
+    color: yellow;
+}
+
+footer {
+    border-top: 4px solid green;
+    background-color: rgb(46, 46, 46);
+}
+
+.road {
+    border-top: 5px dashed orange;
+}
+
+@media screen and (max-width: 720px) {}
 
 @media screen and (max-width: 500px) {
     .circle {

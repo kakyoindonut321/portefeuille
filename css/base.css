@@ -5,6 +5,13 @@
     /* src: url('https'); */
 }
 
+@font-face {
+    font-family: 'undertale-regular';
+    src: url('/asset/font/undertale-regular.ttf') format('woff'), url('/asset/font/undertale-regular.ttf') format('truetype');
+    /* src: url('https://raw.githubusercontent.com/kakyoindonut3/21/portefeuille/main/asset/font/undertale.woff'); */
+    /* src: url('https'); */
+}
+
 html {
     height: 100%;
 }
@@ -139,37 +146,20 @@ footer {
     margin: 0;
     width: 100%;
     position: absolute;
-    bottom: 0;
     color: lightgray;
     text-shadow: 0px 2px 0px black;
-    border-top: 4px solid green;
-    background-color: rgb(46, 46, 46);
 }
 
 .road {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-top: 5px dashed orange;
 }
 
 .footerctn {
     padding: 10px;
     display: flex;
     flex-wrap: wrap-reverse;
-}
-
-.github {
-    border: 3px dashed orange;
-    padding: 5px;
-    font-size: 20px;
-    text-decoration: dashed;
-    color: lightgray;
-    text-shadow: 0px 2px 0px black;
-}
-
-.github:hover {
-    color: yellow;
 }
 
 .license {
@@ -182,6 +172,7 @@ footer {
 }
 
 .secret a {
+    font-family: 'undertale-regular';
     text-decoration: none;
     color: rgb(65, 65, 65);
     text-shadow: none;
@@ -219,20 +210,9 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-    .github {
-        border: 2px dashed orange;
-        padding: 3px;
-        font-size: 14px;
-    }
     .secret {
         display: none;
     }
 }
 
-@media screen and (max-width: 380px) {
-    .github {
-        border: 2px dashed orange;
-        padding: 3px;
-        font-size: 10px;
-    }
-}
+@media screen and (max-width: 380px) {}
