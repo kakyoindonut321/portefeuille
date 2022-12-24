@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sunset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -60,7 +61,60 @@
         <div>
             <h1 class="basetitle">Youtube</h1>
             <div>
-
+                <!-- <div>
+                    <iframe id="ytplayer" type="text/html" width="300" height="200" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                </div> -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trans">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/-ZVZgCrHy5E" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- http://img.youtube.com/vi/[video-id]/[thumbnail-number].jpg -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
         <hr>
@@ -87,10 +141,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         let ham = document.querySelector('.hamburger a');
         let navList = document.querySelector('.nav1').children;
         let circle = document.querySelector('.circle');
+        var slidescount = 0;
+        var spacebetweenswipe = 0;
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 
@@ -98,12 +155,30 @@
             for (let iNav = 0; iNav < navList.length; iNav++) {
                 navList[iNav].classList.toggle('open');
             }
+            slidescount = 4;
+            spacebetweenswipe = 30;
+        } else if (width > 400) {
+            slidescount = 3;
+            spacebetweenswipe = 10;
+        } else {
+            slidescount = 2;
+            spacebetweenswipe = 3;
         }
 
         ham.addEventListener("click", () => {
             for (let iNav = 0; iNav < navList.length; iNav++) {
                 navList[iNav].classList.toggle('open');
             }
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: slidescount,
+            spaceBetween: 30,
+            // centeredSlides: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
 </body>
