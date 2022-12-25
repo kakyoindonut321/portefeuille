@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #3880B0);
+    background-image: linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
     background-size: 100%, 40%;
     background-repeat: no-repeat, repeat;
     background-attachment: fixed, scroll;
@@ -99,8 +99,78 @@ footer {
     border-top: 5px dashed #efef00;
 }
 
-@media screen and (max-width: 720px) {}
+.swiper {
+    padding: 10px;
+    background-color: #eeeeeea1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
 
-@media screen and (max-width: 500px) {}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
-@media screen and (max-width: 380px) {}
+.swiper-slide {
+    background-color: #eeeeee5a;
+    display: block;
+    width: 300px;
+    height: 200px;
+    /* object-fit: cover; */
+}
+
+.relativity {
+    position: relative;
+}
+
+.relativity img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 200px;
+}
+
+.trans {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.trans:hover {
+    background-color: #ffffffa1;
+}
+
+@media screen and (max-width: 720px) {
+    .trans {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .trans {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .trans {
+        height: 10px;
+    }
+}
