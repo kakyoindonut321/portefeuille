@@ -100,8 +100,11 @@ footer {
 }
 
 .swiper {
+    padding: 10px;
+    background-color: #eeeeeea1;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .swiper-slide {
@@ -130,9 +133,28 @@ footer {
     /* object-fit: cover; */
 }
 
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
+.relativity {
+    position: relative;
+}
+
+.relativity img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 200px;
+}
+
+.trans {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.trans:hover {
+    background-color: #ffffffa1;
 }
 
 @media screen and (max-width: 720px) {
