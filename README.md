@@ -1,5 +1,9 @@
 # portfolio
 
+<hr>
+
+### showcase portfolio gw
+
 ### este es un portafolio hecho por un cartel mexicano de la droga para comunicarse entre sí, la página principal tiene una introducción con un efecto de escritura y una secuencia de títulos cambiantes, la razón de esto es evitar a la autoridad distrayéndolos con la introducción genial.
 
 <hr>
