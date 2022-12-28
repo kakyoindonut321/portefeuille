@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'undertale';
-    /* src: url('/asset/font/undertale.ttf') format('woff'), url('/asset/font/undertale.ttf') format('truetype'); */
-    src: url('https://raw.githubusercontent.com/kakyoindonut3/21/portefeuille/main/asset/font/undertale.woff');
+    src: url('/asset/font/undertale.ttf') format('woff'), url('/asset/font/undertale.ttf') format('truetype');
+    /* src: url('https://raw.githubusercontent.com/kakyoindonut3/21/portefeuille/main/asset/font/undertale.woff'); */
     /* src: url('https'); */
 }
 
 @font-face {
     font-family: 'undertale-regular';
-    /* src: url('/asset/font/undertale-regular.ttf') format('woff'), url('/asset/font/undertale-regular.ttf') format('truetype'); */
-    src: url('https://raw.githubusercontent.com/kakyoindonut3/21/portefeuille/main/asset/font/undertale-regular.woff');
+    src: url('/asset/font/undertale-regular.ttf') format('woff'), url('/asset/font/undertale-regular.ttf') format('truetype');
+    /* src: url('https://raw.githubusercontent.com/kakyoindonut3/21/portefeuille/main/asset/font/undertale-regular.woff'); */
     /* src: url('https'); */
 }
 
@@ -206,6 +206,13 @@ footer {
     .three {
         transition-delay: .2s;
         top: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        margin: 10px;
+        margin-top: 70px;
     }
 }
 
