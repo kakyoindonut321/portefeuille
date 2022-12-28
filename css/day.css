@@ -1,0 +1,33 @@
+body {
+    background-image: linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, #0463CA, #0487E2);
+    background-size: 100%, 40%;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed, scroll;
+    background-position: center, center;
+}
+
+.secret a {
+    text-decoration: none;
+    color: #414141;
+    text-shadow: none;
+    font-size: 10px;
+}
+
+footer {
+    border-top: 4px solid limegreen;
+    background-color: #696767;
+}
+
+.road {
+    border-top: 5px dashed yellow;
+}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 500px) {
+    .secret {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {}
