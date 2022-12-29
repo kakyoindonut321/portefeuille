@@ -90,6 +90,13 @@ body {
     resize: none;
 }
 
+
+/* .socialh1 {
+    text-align: center;
+    color: darkslateblue;
+    border-bottom: 2px dashed darkslategray;
+} */
+
 .videocon {
     padding: 5px;
     border: 5px dashed darkslateblue;

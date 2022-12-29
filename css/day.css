@@ -1,9 +1,23 @@
 body {
-    background-image: linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, #0463CA, #0487E2);
-    background-size: 100%, 40%;
-    background-repeat: no-repeat, repeat;
-    background-attachment: fixed, scroll;
-    background-position: center, center;
+    background-image: url('/asset/image/cloud.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, rgb(25, 127, 236), #0487E2);
+    background-size: 70%, 100%;
+    background-repeat: repeat-x, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: 0% 100%, center;
+    image-rendering: pixelated;
+    animation: cloud 50s linear infinite;
+}
+
+@keyframes cloud {
+    to {
+        background-position: 233% 100%, center;
+    }
+}
+
+.temporary {
+    /* background-color: red; */
+    width: 100px;
+    height: 1000px;
 }
 
 .secret a {
