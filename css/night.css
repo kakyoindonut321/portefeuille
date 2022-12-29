@@ -1,6 +1,7 @@
 body {
     background-color: black;
-    background-image: linear-gradient(to bottom, transparent, navy), url('/asset/image/starsbg.png');
+    /* background-image: linear-gradient(to bottom, transparent, navy), url('/asset/image/starsbg.png'); */
+    background-image: linear-gradient(to bottom, transparent, navy), url('https://kakyoindonut321.github.io/portefeuille/asset/image/starsbg.png');
     /* background-image: url('asset/image/starsbg.png'); */
     background-size: 100%, 40%;
     background-repeat: no-repeat, repeat;

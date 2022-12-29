@@ -1,5 +1,6 @@
 body {
-    background-image: url('/asset/image/cloud.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, rgb(25, 127, 236), #0487E2);
+    /* background-image: url('/asset/image/cloud.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, rgb(25, 127, 236), #0487E2); */
+    background-image: url('https://kakyoindonut321.github.io/portefeuille/asset/image/starsbg.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, rgb(25, 127, 236), #0487E2);
     background-size: 70%, 100%;
     background-repeat: repeat-x, no-repeat;
     background-attachment: fixed, fixed;
