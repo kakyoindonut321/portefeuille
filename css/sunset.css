@@ -90,13 +90,24 @@ body {
     resize: none;
 }
 
-footer {
-    border-top: 4px solid #00c500;
-    background-color: #565555;
+
+/* .socialh1 {
+    text-align: center;
+    color: darkslateblue;
+    border-bottom: 2px dashed darkslategray;
+} */
+
+.videocon {
+    padding: 5px;
+    border: 5px dashed darkslateblue;
+    border-radius: 10px;
 }
 
-.road {
-    border-top: 5px dashed #efef00;
+.videocon h3 {
+    text-align: center;
+    color: darkslategray;
+    padding: 0;
+    margin: 0;
 }
 
 .swiper {
@@ -130,47 +141,219 @@ footer {
     display: block;
     width: 300px;
     height: 200px;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 
 .relativity {
-    position: relative;
+    /* position: relative; */
+    text-decoration: none;
 }
 
 .relativity img {
     position: absolute;
     left: 0;
     top: 0;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
 }
 
 .trans {
     position: absolute;
-    width: 300px;
-    height: 200px;
-    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #ffffffa1;
+    font-family: "undertale-regular";
+    color: darkslategray;
+    transition: background-color 0.5s ease;
     z-index: 2;
 }
 
-.trans:hover {
-    background-color: #ffffffa1;
+.tText {
+    font-size: 20px;
+    overflow: hidden;
+    /* transition: all 0.5s ease; */
 }
 
-@media screen and (max-width: 720px) {
-    .trans {
+.relativity:hover>.trans {
+    background-color: #ffffffd1;
+}
+
+.relativity:hover>img {
+    opacity: 0.7;
+}
+
+.flexyt {
+    background-color: #ffffffa1;
+    color: darkslateblue;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+    justify-content: space-between;
+}
+
+.channel {
+    display: flex;
+    padding-right: 5px;
+    color: darkslategray;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.channel:hover>.channelname h1 {
+    color: #312963;
+}
+
+.channel:hover {
+    background-color: #ffffff7a;
+}
+
+.pfp {
+    padding: 10px;
+}
+
+.pfp img {
+    width: 100px;
+    height: 100px;
+    /* border: 3px solid rgb(66, 135, 255); */
+    border-radius: 50%;
+}
+
+.channelname {
+    margin: auto;
+    margin-left: 0;
+}
+
+.subs {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px lightcoral;
+    transition: transform .1s ease, box-shadow .1s ease;
+}
+
+.subcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+
+.subsubcon {
+    margin-right: 10px;
+}
+
+.subs:hover {
+    /* color: lightgray; */
+    background-color: #e40505;
+    transform: translate(0px, 3px);
+    box-shadow: 0px 0px 0px lightcoral;
+}
+
+
+/* .subs:active {
+    transform: translate(100px, 10px);
+} */
+
+.socialcon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subsocial {
+    background-color: #ffffffa1;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ehicon {
+    margin: 20px;
+    color: darkslateblue;
+    text-decoration: none;
+}
+
+.ehicon div img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #dd00dd2a;
+    border-radius: 50%;
+}
+
+.ehicon h3 {
+    text-align: center;
+    font-family: "undertale-regular";
+    color: darkslategray;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    border-top: 4px solid #00c500;
+    background-color: #565555;
+}
+
+.road {
+    border-top: 5px dashed #efef00;
+}
+
+@media screen and (max-width: 900px) {
+    .swiper-slide {
+        width: 250px;
         height: 100px;
     }
 }
 
+@media screen and (max-width: 700px) {
+    .tText {
+        font-size: 10px;
+    }
+    .channelname h1 {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 500px) {
-    .trans {
-        height: 50px;
+    .swiper {
+        padding: 3px;
+    }
+    .tText {
+        font-size: 10px;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+    .pfp img {
+        width: 70px;
+        height: 70px;
+    }
+    .channelname h1 {
+        font-size: 12px;
+    }
+    .videocon {
+        border: 3px dashed darkslateblue;
     }
 }
 
 @media screen and (max-width: 380px) {
-    .trans {
-        height: 10px;
+    .swiper-slide {
+        width: 100px;
+        height: 70px;
+    }
+    .pfp img {
+        width: 50px;
+        height: 50px;
+    }
+    .channelname h1 {
+        font-size: 10px;
     }
 }
