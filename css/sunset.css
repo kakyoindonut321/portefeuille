@@ -1,9 +1,26 @@
-body {
+/* body {
     background-image: linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
     background-size: 100%, 40%;
     background-repeat: no-repeat, repeat;
     background-attachment: fixed, scroll;
     background-position: center, center;
+} */
+
+body {
+    /* background-image: url('/asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4); */
+    background-image: url('https://kakyoindonut321.github.io/portefeuille/asset/image/cloud.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, rgb(25, 127, 236), #0487E2);
+    background-size: 70%, 100%;
+    background-repeat: repeat-x, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: 233% 100%, center;
+    image-rendering: pixelated;
+    animation: cloud 50s linear infinite;
+}
+
+@keyframes cloud {
+    to {
+        background-position: 0% 100%, center;
+    }
 }
 
 .basetitle {
@@ -320,6 +337,9 @@ footer {
     .channelname h1 {
         font-size: 20px;
     }
+    .ehicon {
+        margin: 15px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -342,6 +362,9 @@ footer {
     .videocon {
         border: 3px dashed darkslateblue;
     }
+    .ehicon {
+        margin: 10px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -355,5 +378,8 @@ footer {
     }
     .channelname h1 {
         font-size: 10px;
+    }
+    .ehicon {
+        margin: 5px;
     }
 }
