@@ -39,6 +39,8 @@ body {
 
 .websites {
     padding: 10px;
+    color: black;
+    text-decoration: none;
     background-color: #cccccca1;
     transition: transform .5s ease;
 }
@@ -49,6 +51,10 @@ body {
 
 .beatles img {
     width: 400px;
+}
+
+.listcon {
+    text-align: center;
 }
 
 .subdesc {
