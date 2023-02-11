@@ -14,6 +14,7 @@ body {
     background-attachment: fixed, fixed;
     background-position: 233% 100%, center;
     image-rendering: pixelated;
+    /* background-blend-mode: overlay;  */
     animation: cloud 50s linear infinite;
 }
 
