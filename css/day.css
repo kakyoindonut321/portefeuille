@@ -60,6 +60,10 @@ body {
     transform: scale(90%);
 }
 
+.scale-up {
+    transform: scale(150%);
+}
+
 .webcard-img-div img {
     width: 18vw;
     max-width: 300px;

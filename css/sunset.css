@@ -87,11 +87,12 @@ body {
     text-align: center;
     padding: 5px 50px 5px 50px;
     font-family: 'undertale';
+    transition: all 0.2s ease;
 }
 
 .submit button:hover {
     background-color: #d8e6e6;
-    color: orangered;
+    color: #303030;
     cursor: pointer;
 }
 
@@ -226,6 +227,15 @@ body {
     transition: all 0.5s ease;
 }
 
+.channelname h1 {
+    margin: 0;
+}
+
+.channelink {
+    font-family: 'undertale-regular';
+    margin: 0;
+}
+
 .channel:hover>.channelname h1 {
     color: #312963;
 }
@@ -305,6 +315,11 @@ body {
     margin: 20px;
     color: darkslateblue;
     text-decoration: none;
+    transition: transform .5s ease;
+}
+
+.ehicon:hover {
+    transform: scale(110%);
 }
 
 .ehicon div img {
@@ -345,6 +360,9 @@ footer {
     .channelname h1 {
         font-size: 20px;
     }
+    .channelink {
+        font-size: 12px;
+    }
     .ehicon {
         margin: 15px;
     }
@@ -367,6 +385,9 @@ footer {
     .channelname h1 {
         font-size: 12px;
     }
+    .channelink {
+        font-size: 6px;
+    }
     .videocon {
         border: 3px dashed darkslateblue;
     }
@@ -386,6 +407,9 @@ footer {
     }
     .channelname h1 {
         font-size: 10px;
+    }
+    .channelink {
+        font-size: 6px;
     }
     .ehicon {
         margin: 5px;

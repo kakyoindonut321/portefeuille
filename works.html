@@ -182,7 +182,7 @@
         let ham = document.querySelector('.hamburger a');
         let navList = document.querySelector('.nav1').children;
         let circle = document.querySelector('.circle');
-        let web = document.querySelector('.websites')
+        let web = document.querySelectorAll('.websites')
 
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
@@ -197,6 +197,12 @@
             for (let iNav = 0; iNav < navList.length; iNav++) {
                 navList[iNav].classList.toggle('open');
             }
+        });
+
+        web.forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.add("scale-up");
+            });
         });
     </script>
 </body>
