@@ -35,6 +35,11 @@ body {
     display: block;
 }
 
+.name {
+    font-family: 'undertale-regular';
+    font-size: 16px;
+}
+
 .subinput {
     /* border: 1px solid red; */
     text-align: center;
@@ -209,6 +214,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     transition: all 0.5s ease;
+    backdrop-filter: blur(1px);
     justify-content: space-between;
 }
 
@@ -291,6 +297,7 @@ body {
     padding: 10px;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(1px);
     flex-wrap: wrap;
 }
 
