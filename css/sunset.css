@@ -7,8 +7,8 @@
 } */
 
 body {
-    /* background-image: url('/asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4); */
-    background-image: url('https://kakyoindonut321.github.io/portefeuille//asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
+    background-image: url('/asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
+    /* background-image: url('https://kakyoindonut321.github.io/portefeuille//asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4); */
     background-size: 70%, 100%;
     background-repeat: repeat-x, no-repeat;
     background-attachment: fixed, fixed;
@@ -33,6 +33,11 @@ body {
 
 .formemail {
     display: block;
+}
+
+.name {
+    font-family: 'undertale-regular';
+    font-size: 16px;
 }
 
 .subinput {
@@ -209,6 +214,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     transition: all 0.5s ease;
+    backdrop-filter: blur(1px);
     justify-content: space-between;
 }
 
@@ -291,6 +297,7 @@ body {
     padding: 10px;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(1px);
     flex-wrap: wrap;
 }
 
