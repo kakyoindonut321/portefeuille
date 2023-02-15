@@ -15,7 +15,31 @@ body {
     }
 }
 
-.creation-types {}
+.in-progress {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffffa1;
+    backdrop-filter: blur(1px);
+}
+
+.in-progress h1 {
+    text-align: center;
+    color: red;
+}
+
+.in-progress i {
+    background-color: #eeeeeef1;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 40px;
+    left: -25px;
+    top: -25px;
+}
+
+
+/* .creation-types {} */
 
 .creation-title {
     text-align: center;
@@ -43,7 +67,7 @@ body {
 .websites,
 .webcard-p {
     width: 20vw;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 
 .websites {
@@ -52,7 +76,7 @@ body {
     min-width: 40px;
     color: black;
     text-decoration: none;
-    background-color: #cccccca1;
+    background-color: #cccccca0;
     transition: transform .5s ease;
 }
 
@@ -60,13 +84,19 @@ body {
     transform: scale(90%);
 }
 
-.scale-up {
+
+/* .websites:active {
+    transform: scale(110%);
+} */
+
+
+/* .scale-up {
     transform: scale(150%);
-}
+} */
 
 .webcard-img-div img {
     width: 18vw;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 
 .webcard {
@@ -92,6 +122,11 @@ body {
 .album-container:hover {
     transform: scale(105%);
 }
+
+
+/* .album-container:active {
+    transform: scale(100%);
+} */
 
 .album-container:hover .album-image-con img {
     animation: rotating 4s linear infinite;
@@ -126,11 +161,17 @@ body {
 .gamecard {
     margin: 2%;
     padding: 2%;
-    border: 4px dashed #505000;
     color: black;
-    border-radius: 10px;
+    background: linear-gradient(90deg, #505000 50%, transparent 50%), linear-gradient(90deg, #505000 50%, transparent 50%), linear-gradient(0deg, #505000 50%, transparent 50%), linear-gradient(0deg, #505000 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 4% 1%, 4% 1%, 1% 4%, 1% 4%;
+    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+    /* border-radius: 10px; */
+    animation: dash 7s linear infinite;
+    animation-play-state: paused;
     text-align: center;
     text-decoration: none;
+    transition: all 0.5s ease;
 }
 
 .gamecard h3 {
@@ -146,6 +187,19 @@ body {
 
 .game-image-con img {
     width: 30vw;
+}
+
+.gamecard:hover {
+    padding: 2%;
+    animation-play-state: running;
+    transform: scaleX(103%) scaleY(97%);
+    filter: drop-shadow(0 0 10mm white);
+}
+
+@keyframes dash {
+    to {
+        background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+    }
 }
 
 

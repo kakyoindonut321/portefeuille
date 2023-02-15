@@ -10,7 +10,7 @@ body {
     background-image: url('../asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
     /* background-image: url('https://kakyoindonut321.github.io/portefeuille//asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4); */
     background-size: 70%, 100%;
-    background-repeat: repeat-x, no-repeat;
+    background-repeat: repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-position: 233% 100%, center;
     image-rendering: pixelated;
@@ -124,10 +124,10 @@ body {
 .videocon {
     padding: 5px;
     border: 5px dashed darkslateblue;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
-.videocon h3 {
+.videoh2 {
     text-align: center;
     color: darkslategray;
     padding: 0;
@@ -315,7 +315,7 @@ body {
     margin: 20px;
     color: darkslateblue;
     text-decoration: none;
-    transition: transform .5s ease;
+    transition: transform .2s ease;
 }
 
 .ehicon:hover {
@@ -325,6 +325,7 @@ body {
 .ehicon div img {
     width: 100px;
     height: 100px;
+    image-rendering: auto;
     border: 3px solid #dd00dd2a;
     border-radius: 50%;
 }
@@ -366,6 +367,9 @@ footer {
     .ehicon {
         margin: 15px;
     }
+    body {
+        background-size: 100%, 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -394,6 +398,12 @@ footer {
     .ehicon {
         margin: 10px;
     }
+    body {
+        background-size: 130%, 100%;
+    }
+    .subs {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -413,5 +423,12 @@ footer {
     }
     .ehicon {
         margin: 5px;
+    }
+    body {
+        background-size: 15 0%, 100%;
+    }
+    .subs {
+        font-size: 12px;
+        padding: 7px;
     }
 }
