@@ -6,7 +6,7 @@ body {
     background-size: 100%, 40%;
     background-repeat: no-repeat, repeat;
     background-attachment: fixed, scroll;
-    background-position: center, center;
+    background-position: center, right;
 }
 
 .pfp {
@@ -17,7 +17,7 @@ body {
 .pfp img {
     width: 200px;
     height: 200px;
-    border: 3px solid rgb(66, 135, 255);
+    /* border: 3px solid rgb(66, 135, 255); */
     border-radius: 50%;
 }
 
@@ -164,7 +164,11 @@ footer {
     border-top: 5px dashed orange;
 }
 
-@media screen and (max-width: 720px) {}
+@media screen and (max-width: 720px) {
+    body {
+        background-size: 100%, 70%;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .circle {
@@ -186,6 +190,9 @@ footer {
     }
     .secret {
         display: none;
+    }
+    body {
+        background-size: 100%, 85%;
     }
 }
 
@@ -218,6 +225,9 @@ footer {
         border: 2px dashed orange;
         padding: 3px;
         font-size: 10px;
+    }
+    body {
+        background-size: 100%, 100%;
     }
 }
 
