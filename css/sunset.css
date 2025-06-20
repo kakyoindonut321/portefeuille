@@ -1,0 +1,455 @@
+/* body {
+    background-image: linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
+    background-size: 100%, 40%;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed, scroll;
+    background-position: center, center;
+} */
+
+body {
+    background-image: url('../asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4);
+    /* background-image: url('https://kakyoindonut321.github.io/portefeuille//asset/image/starsbg.png'), linear-gradient(to top, #FE8714, #F59193, #D47E97, #90ade4, #90ade4); */
+    background-size: 70%, 100%;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: 233% 100%, center;
+    image-rendering: pixelated;
+    /* background-blend-mode: overlay;  */
+    animation: cloud 50s linear infinite;
+}
+
+@keyframes cloud {
+    to {
+        background-position: 0% 100%, center;
+    }
+}
+
+.basetitle {
+    color: darkslateblue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.formemail {
+    display: block;
+}
+
+.name {
+    font-family: 'undertale-regular';
+    font-size: 16px;
+}
+
+.email {
+    font-family: 'undertale-regular';
+    font-size: 16px;
+}
+
+.childinput {
+    width: 50%;
+}
+
+.togetherinput {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subinput {
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.subinput label h4 {
+    color: darkslateblue;
+    margin: 0;
+    padding: 5px;
+}
+
+.subinput input,
+.subinput select {
+    background-color: azure;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.subinput select {
+    font-size: 20px;
+}
+
+.message,
+.subinput select {
+    font-family: 'undertale-regular';
+}
+
+.submit {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.submit button {
+    border: none;
+    background-color: azure;
+    color: #101010;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 50px 5px 50px;
+    font-family: 'undertale';
+    transition: all 0.2s ease;
+}
+
+.submit button:hover {
+    background-color: #d8e6e6;
+    color: #303030;
+    cursor: pointer;
+}
+
+.submit button:active {
+    background-color: azure;
+    color: #101010;
+    cursor: pointer;
+}
+
+.message {
+    background-color: azure;
+    width: 100%;
+    height: 150px;
+    /* padding: 12px 20px; */
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+
+/* .socialh1 {
+    text-align: center;
+    color: darkslateblue;
+    border-bottom: 2px dashed darkslategray;
+} */
+
+.videocon {
+    padding: 5px;
+    border: 5px dashed darkslateblue;
+    /* border-radius: 10px; */
+}
+
+.videoh2 {
+    text-align: center;
+    color: darkslategray;
+    padding: 0;
+    margin: 0;
+}
+
+.swiper {
+    padding: 10px;
+    background-color: #eeeeeea1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    background-color: #eeeeee5a;
+    display: block;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.relativity {
+    /* position: relative; */
+    text-decoration: none;
+}
+
+.relativity img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.trans {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #ffffffa1;
+    font-family: "undertale-regular";
+    color: darkslategray;
+    transition: background-color 0.5s ease;
+    z-index: 2;
+}
+
+.tText {
+    font-size: 20px;
+    overflow: hidden;
+    /* transition: all 0.5s ease; */
+}
+
+.relativity:hover>.trans {
+    background-color: #ffffffd1;
+}
+
+.relativity:hover>img {
+    opacity: 0.7;
+}
+
+.flexyt {
+    background-color: #ffffffa1;
+    color: darkslateblue;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(1px);
+    justify-content: space-between;
+}
+
+.channel {
+    display: flex;
+    padding-right: 5px;
+    color: darkslategray;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.channelname h1 {
+    margin: 0;
+}
+
+.channelink {
+    font-family: 'undertale-regular';
+    margin: 0;
+}
+
+.channel:hover>.channelname h1 {
+    color: #312963;
+}
+
+.channel:hover {
+    background-color: #ffffff7a;
+}
+
+.pfp {
+    padding: 10px;
+}
+
+.pfp img {
+    width: 100px;
+    height: 100px;
+    /* border: 3px solid rgb(66, 135, 255); */
+    border-radius: 50%;
+}
+
+.channelname {
+    margin: auto;
+    margin-left: 0;
+}
+
+.subs {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px lightcoral;
+    transition: transform .1s ease, box-shadow .1s ease;
+}
+
+.subcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+
+.subsubcon {
+    margin-right: 10px;
+}
+
+.subs:hover {
+    /* color: lightgray; */
+    background-color: #e40505;
+    transform: translate(0px, 3px);
+    box-shadow: 0px 0px 0px lightcoral;
+}
+
+
+/* .subs:active {
+    transform: translate(100px, 10px);
+} */
+
+.socialcon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subsocial {
+    background-color: #ffffffa1;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+    flex-wrap: wrap;
+}
+
+.ehicon {
+    margin: 20px;
+    color: darkslateblue;
+    text-decoration: none;
+    transition: transform .2s ease;
+}
+
+.ehicon:hover {
+    transform: scale(110%);
+}
+
+.ehicon div img {
+    width: 100px;
+    height: 100px;
+    image-rendering: auto;
+    border: 3px solid #dd00dd2a;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #dd00dd69;
+}
+
+.ehicon:hover>div img {
+    border: 3px solid #ff6fff69;
+    box-shadow: 0px 0px 30px #e52fe569;
+}
+
+.ehicon h3 {
+    text-align: center;
+    font-family: "undertale-regular";
+    color: darkslategray;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    border-top: 4px solid #00c500;
+    background-color: #565555;
+}
+
+.road {
+    border-top: 5px dashed #efef00;
+}
+
+@media screen and (max-width: 900px) {
+    .swiper-slide {
+        width: 250px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tText {
+        font-size: 10px;
+    }
+    .channelname h1 {
+        font-size: 20px;
+    }
+    .channelink {
+        font-size: 12px;
+    }
+    .ehicon {
+        margin: 15px;
+    }
+    body {
+        background-size: 100%, 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .swiper {
+        padding: 3px;
+    }
+    .tText {
+        font-size: 10px;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+    .pfp img {
+        width: 70px;
+        height: 70px;
+    }
+    .channelname h1 {
+        font-size: 12px;
+    }
+    .channelink {
+        font-size: 6px;
+    }
+    .videocon {
+        border: 3px dashed darkslateblue;
+    }
+    .ehicon {
+        margin: 10px;
+    }
+    body {
+        background-size: 130%, 100%;
+    }
+    .subs {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .swiper-slide {
+        width: 100px;
+        height: 70px;
+    }
+    .pfp img {
+        width: 50px;
+        height: 50px;
+    }
+    .channelname h1 {
+        font-size: 10px;
+    }
+    .channelink {
+        font-size: 6px;
+    }
+    .ehicon {
+        margin: 5px;
+    }
+    body {
+        background-size: 15 0%, 100%;
+    }
+    .subs {
+        font-size: 12px;
+        padding: 7px;
+    }
+}

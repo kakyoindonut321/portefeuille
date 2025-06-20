@@ -1,0 +1,286 @@
+body {
+    background-image: url('../asset/image/cloud.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, #197fec, #0487E2);
+    /* background-image: url('https://kakyoindonut321.github.io/portefeuille/asset/image/cloud.png'), linear-gradient(to top, #09B1EC, #65C2F5, #B0D6F5, rgb(25, 127, 236), #0487E2); */
+    background-size: 70%, 100%;
+    background-repeat: repeat-x, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: 0% 100%, center;
+    image-rendering: pixelated;
+    animation: cloud 50s linear infinite;
+}
+
+@keyframes cloud {
+    to {
+        background-position: 233% 100%, center;
+    }
+}
+
+.in-progress {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffffa1;
+    backdrop-filter: blur(1px);
+}
+
+.in-progress h1 {
+    text-align: center;
+    color: red;
+}
+
+.in-progress i {
+    background-color: #eeeeeef1;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 40px;
+    left: -25px;
+    top: -25px;
+}
+
+
+/* .creation-types {} */
+
+.creation-title {
+    text-align: center;
+    color: white;
+}
+
+.creation-title h1 {
+    margin: 10px;
+    padding: 0;
+}
+
+.creation-container {
+    width: 100%;
+    /* height: 500px; */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ffffffa1;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.websites,
+.webcard-p {
+    width: 20vw;
+    /* max-width: 300px; */
+}
+
+.websites {
+    margin: 2%;
+    padding: 1%;
+    padding-top: 2%;
+    min-width: 40px;
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #dddddda1, #bbbbbbd1, #eeeeeea1);
+    /* background-color: #cccccca1; */
+    transition: transform .5s ease;
+}
+
+.websites:hover {
+    transform: scale(90%);
+}
+
+
+/* .websites:active {
+    transform: scale(110%);
+} */
+
+
+/* .scale-up {
+    transform: scale(150%);
+} */
+
+.webcard-img-div img {
+    width: 18vw;
+    /* max-width: 300px; */
+}
+
+.webcard {
+    text-align: center;
+    font-size: 1.4vw;
+}
+
+.webcard-p {
+    font-size: 1.5vw;
+    font-family: 'undertale-regular';
+}
+
+.album-container {
+    margin: 1%;
+    width: 25vw;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2vw;
+    transition: transform 1s ease;
+}
+
+.album-container:hover {
+    transform: scale(105%);
+}
+
+
+/* .album-container:active {
+    transform: scale(100%);
+} */
+
+.album-container:hover .album-image-con img {
+    animation: rotating 4s linear infinite;
+}
+
+.album-container h3 {
+    margin: 0;
+}
+
+.album-image-con img {
+    width: 20vw;
+    transition: transform 3s ease;
+}
+
+@keyframes rotating {
+    from {
+        /* -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg); */
+        transform: rotate(0deg);
+    }
+    to {
+        /* -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg); */
+        transform: rotate(360deg);
+    }
+}
+
+.gamecard {
+    margin: 2%;
+    padding: 2%;
+    color: black;
+    background: linear-gradient(90deg, #505000 50%, transparent 50%), linear-gradient(90deg, #505000 50%, transparent 50%), linear-gradient(0deg, #505000 50%, transparent 50%), linear-gradient(0deg, #505000 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 4% 1%, 4% 1%, 1% 4%, 1% 4%;
+    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+    /* border-radius: 10px; */
+    animation: dash 7s linear infinite;
+    animation-play-state: paused;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.gamecard h3 {
+    margin: 0;
+    font-size: 2vw;
+}
+
+/* .gamecard>div {
+    border: 1px solid black;
+    
+} */
+
+.game-desc p {
+    font-family: 'undertale-regular';
+    margin: 0;
+    font-size: 2vw;
+    max-width: 30vw;
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.game-image-con img {
+    width: 30vw;
+}
+
+.gamecard:hover {
+    padding: 2%;
+    animation-play-state: running;
+    transform: scaleX(103%) scaleY(97%);
+    filter: drop-shadow(0 0 10mm white);
+}
+
+@keyframes dash {
+    to {
+        background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+    }
+}
+
+
+/*  */
+
+
+/* .temporary {
+    width: 100px;
+    height: 500px;
+} */
+
+.secret a {
+    text-decoration: none;
+    color: #414141;
+    text-shadow: none;
+    font-size: 10px;
+}
+
+footer {
+    border-top: 4px solid limegreen;
+    background-color: #696767;
+}
+
+.road {
+    border-top: 5px dashed yellow;
+}
+
+@media screen and (max-width: 720px) {
+    .websites,
+    .webcard-p {
+        width: 35vw;
+    }
+    .webcard-img-div img {
+        width: 33vw;
+    }
+    .webcard h2 {
+        font-size: 4vw;
+    }
+    .webcard-p {
+        font-size: 2.5vw;
+    }
+    .album-container {
+        width: 30vw;
+        font-size: 3vw;
+    }
+    .album-image-con img {
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .secret {
+        display: none;
+    }
+    .album-container {
+        width: 40vw;
+        font-size: 3.4vw;
+    }
+    .album-image-con img {
+        width: 35vw;
+    }
+    .gamecard h3 {
+        font-size: 4vw;
+    }
+    .game-desc p {
+        font-size: 3vw;
+    }
+    .game-image-con img {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 380px) {}
