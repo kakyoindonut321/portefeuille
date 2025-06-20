@@ -181,10 +181,19 @@ body {
     font-size: 2vw;
 }
 
+/* .gamecard>div {
+    border: 1px solid black;
+    
+} */
+
 .game-desc p {
     font-family: 'undertale-regular';
     margin: 0;
     font-size: 2vw;
+    max-width: 30vw;
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .game-image-con img {

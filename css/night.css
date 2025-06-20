@@ -5,7 +5,7 @@ body {
     /* background-image: url('asset/image/starsbg.png'); */
     background-size: 100%, 40%;
     background-repeat: no-repeat, repeat;
-    background-attachment: fixed, scroll;
+    background-attachment:fixed, fixed;
     background-position: center, right;
 }
 
@@ -43,7 +43,7 @@ body {
     margin: 10px;
     color: white;
     text-shadow: 0px 2px 0px black;
-    box-shadow: 0px 5px 6px black;
+    /* box-shadow: 0px 0px 10px #ffffff; */
     text-align: center;
     border-radius: 50%;
     transition: all 1s ease-in-out;
@@ -68,7 +68,7 @@ body {
 
 .circle:hover {
     transform: rotate(180deg);
-    box-shadow: 0px -5px 6px black;
+    /* box-shadow: 0px -5px 6px black; */
 }
 
 .c-icon {
@@ -76,7 +76,7 @@ body {
     font-size: 50px;
     top: 110px;
     right: 125px;
-    text-shadow: 0px 0px 3px lightgray;
+    text-shadow: 0px 0px 1px rgb(0, 0, 0);
 }
 
 .textUp {
@@ -111,14 +111,26 @@ body {
     background: linear-gradient(to bottom, #6B93D6c1 50%, #9FC164c1 50%);
 }
 
+.languages {
+    display: flex;
+    justify-content: center;
+}
+
+.lang-title h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
 .exc {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .about {
     margin: 10px;
     /* background-color: midnightblue; */
-    background-image: linear-gradient(45deg, midnightblue, navy, transparent);
+    background-image: linear-gradient(45deg, navy, rgba(25, 25, 112, 0.582), transparent);
     font-size: 20px;
     padding: 10px;
     color: white;

@@ -40,6 +40,21 @@ body {
     font-size: 16px;
 }
 
+.email {
+    font-family: 'undertale-regular';
+    font-size: 16px;
+}
+
+.childinput {
+    width: 50%;
+}
+
+.togetherinput {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .subinput {
     /* border: 1px solid red; */
     text-align: center;
@@ -328,6 +343,12 @@ body {
     image-rendering: auto;
     border: 3px solid #dd00dd2a;
     border-radius: 50%;
+    box-shadow: 0px 0px 10px #dd00dd69;
+}
+
+.ehicon:hover>div img {
+    border: 3px solid #ff6fff69;
+    box-shadow: 0px 0px 30px #e52fe569;
 }
 
 .ehicon h3 {
